@@ -14,8 +14,8 @@
             <div class="movie-title">{{ movie.title }}</div>
             <div class="row">
               <div class="col-sm-4">Release date: {{ movie.release_date }}</div>
-              <div class="col-sm-4"> Budget: {{ movie.budget }}</div>
-              <div class="col-sm-4"> Duration: {{ movie.duration }}</div>
+              <div class="col-sm-4"> Budget: {{ movie.budget | budget }}</div>
+              <div class="col-sm-4"> Duration: {{ movie.duration | duration }}</div>
             </div>
           </div>
           <div class="col-lg-2">
