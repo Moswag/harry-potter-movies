@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import {MovieDetailComponent} from "./movie/detail/movie-detail.component";
 import {MovieListComponent} from "./movie/list/movie-list.component";
+import {movieResolver} from "./movie/resolver/movie-routing-resolve.service";
 
 export const routes: Routes = [
   {
@@ -21,5 +22,8 @@ export const routes: Routes = [
     data: {
       title: 'Movie Details'
     },
+    resolve: {
+      movie: movieResolver,
+    }
   }
 ];
