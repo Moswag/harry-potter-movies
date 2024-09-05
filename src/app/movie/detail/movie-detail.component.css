@@ -1,0 +1,6 @@
+th, td{
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
