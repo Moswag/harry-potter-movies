@@ -2,12 +2,12 @@
   <div class="header">
     <h4>Filters</h4>
     <label for="titleFilter">Title</label>
-    <input type="text" id="titleFilter"/>
-    <label for="yearFilter">Release year</label>
-    <input type="number" id="yearFilter"/>
+    <input type="text" id="titleFilter" [(ngModel)]="titleFilter" (ngModelChange)="filterMovies()"/>
+    <label for="releaseYearFilter">Release year</label>
+    <input type="number" id="releaseYearFilter" [(ngModel)]="releaseYearFilter" (ngModelChange)="filterMovies()"/>
   </div>
   <ul class="film-list">
-    @for(movie of allMovies; track $index){
+    @for(movie of filteredMovies; track $index){
       <li>
         <div class="row">
           <div class="col-lg-10">
